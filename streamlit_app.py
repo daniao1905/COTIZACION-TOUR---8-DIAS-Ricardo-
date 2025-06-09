@@ -110,7 +110,7 @@ for i, dia in enumerate(itinerario):
     ]
 
     hotel_dropdown = [f"{row['NombreHotel']} – ¥{row['Precio'] + row['Impuesto']:,}" for _, row in hoteles_disponibles.iterrows()]
-    hotel_seleccionado = st.selectbox("Hotel para este día", hotel_dropdown, key=f"hotel_{i}") if hotel_dropdown else None
+    hotel_seleccionado = st.selectbox("Hotel para este día", hotel_dropdown, key=f"hotel_select_{i}") if hotel_dropdown else None
 
     precio_hotel = 0
     if hotel_seleccionado:

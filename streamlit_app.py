@@ -109,7 +109,7 @@ for i, dia in enumerate(itinerario):
         df_hoteles["Ciudad"].str.strip().str.lower() == ciudad.strip().lower()
     ]
 
-    hotel_dropdown = [f"{row['Hotel']} – ¥{int(row['Total por noche con impuesto (JPY)']):,}" for _, row in hoteles_disponibles.iterrows()]
+    hotel_dropdown = [f"{row['NombreHotel']} – ¥{row['Precio'] + row['Impuesto']:,}" for _, row in hoteles_disponibles.iterrows()]
     hotel_seleccionado = st.selectbox("Hotel para este día", hotel_dropdown, key=f"hotel_{i}") if hotel_dropdown else None
 
     precio_hotel = 0

@@ -8,7 +8,7 @@ import os
 st.set_page_config(page_title="Cotización de Tour", layout="wide")
 
 # Cargar hoteles desde CSV
-df_hoteles = pd.read_csv("hoteles_con_impuestos.csv")
+df_hoteles = pd.read_csv("hoteles_con_impuestos_con_ciudad.csv")
 
 st.title("Cotización de Tour Japón – JAPONTOUR360")
 
